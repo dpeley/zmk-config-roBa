@@ -9,9 +9,8 @@
 };
 
 &trackball {
-//    automouse-layer = <4>;
-//    scroll-layers = <5>;
-
+    //    automouse-layer = <4>;
+    //    scroll-layers = <5>;
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -86,7 +85,7 @@
 &mkp MCLK       &mkp LCLK       &mkp RCLK    &lt 4 ESC         &lt 3 SPACE  &lt 5 TAB          &kp ENTER  &lt 2 BACKSPACE                                                   &lt 1 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp C_AC_SCROLL_DOWN C_AC_SCROLL_UP>;
         };
 
         FUNCTION {
