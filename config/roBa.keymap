@@ -79,7 +79,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        baseLayer {
             bindings = <
 &kp Q           &kp W           &kp F        &kp P             &kp B                                      &kp J            &kp L              &kp U        &kp Y            &kp SQT
 &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G        &kp LS(LG(S))      &none      &kp M            &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_WIN O
