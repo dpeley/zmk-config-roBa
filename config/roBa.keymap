@@ -116,7 +116,7 @@
 &trans        &trans         &trans     &kp ESC         &none      &kp TAB               &kp ENTER  &kp BACKSPACE                                                    &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(MINUS) LC(LS(EQUAL))>;
+            sensor-bindings = <&inc_dec_kp LC(MINUS) LC(KP_PLUS)>;
         };
 
         Media {
