@@ -85,7 +85,7 @@
 &mkp MCLK       &mkp LCLK       &mkp RCLK    &lt 4 ESC         &lt 3 SPACE  &lt 5 TAB          &kp ENTER  &lt 2 BACKSPACE                                                   &lt 1 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         FUNCTION {
@@ -114,7 +114,7 @@
 &none         &none          &none      &kp ESC         &none      &kp TAB      &kp ENTER  &kp BACKSPACE                                                    &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp SCRL_DOWN SCRL_UP>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         Media {
