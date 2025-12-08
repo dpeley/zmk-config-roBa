@@ -87,7 +87,7 @@
 &mkp MCLK       &mkp LCLK       &mkp RCLK    &lt 4 ESC         &lt 3 SPACE  &lt 5 TAB          &kp ENTER  &lt 2 BACKSPACE                                                   &lt 1 DELETE
             >;
 
-            sensor-bindings = <&inc_dec_mouse_wheel>;
+            sensor-bindings = <&mouse_wheel_down &mouse_wheel_up>;
         };
 
         FUNCTION {
