@@ -20,8 +20,11 @@ jobs:
 
       - name: Init west workspace
         run: |
+          # Start from a clean workspace directory
+          rm -rf /tmp/zmk-workspace
           mkdir -p /tmp/zmk-workspace
           cd /tmp/zmk-workspace
+          # Use this repo (with west.yml at its root) as the manifest
           west init "${GITHUB_WORKSPACE}"
           west update
 
