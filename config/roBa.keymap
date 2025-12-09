@@ -1,4 +1,5 @@
 #include <behaviors.dtsi>
+#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
@@ -74,23 +75,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-        // Vertical scroll aliases
-        ms_wheel_up: ms_wheel_up {
-          compatible = "zmk,behavior-mouse-scroll";
-          // parameters for up direction, taken from mouse emulation docs
-        };
-        ms_wheel_down: ms_wheel_down {
-          compatible = "zmk,behavior-mouse-scroll";
-          // parameters for down
-        };
-        ms_wheel_left: ms_wheel_left {
-          compatible = "zmk,behavior-mouse-scroll";
-          // parameters for left
-        };
-        ms_wheel_right: ms_wheel_right {
-          compatible = "zmk,behavior-mouse-scroll";
-          // parameters for right
-        };
     };
 
     keymap {
@@ -104,7 +88,7 @@
 &mkp MCLK       &mkp LCLK       &mkp RCLK    &lt 4 ESC         &lt 3 SPACE  &lt 5 TAB          &kp ENTER  &lt 2 BACKSPACE                                                   &lt 1 DELETE
             >;
 
-            sensor-bindings = <&ms_wheel_down &ms_wheel_up>;
+            sensor-bindings = <&msc SCRL_DOWN SCRL_UP>;
         };
 
         FUNCTION {
@@ -114,6 +98,8 @@
 &kp F10  &kp F1  &kp F2  &kp F3  &none  &none      &none  &none  &none            &none      &none          &none
 &trans   &trans  &trans  &none   &none  &none      &none  &none                                             &none
             >;
+
+            sensor-bindings = <&msc SCRL_LEFT SCRL_RIGHT>;
         };
 
         NUM {
