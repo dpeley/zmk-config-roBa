@@ -22,7 +22,7 @@ jobs:
         run: |
           mkdir -p /tmp/zmk-workspace
           cd /tmp/zmk-workspace
-          west init -l "${GITHUB_WORKSPACE}/config"
+          west init "${GITHUB_WORKSPACE}"
           west update
 
       - name: Build right half
