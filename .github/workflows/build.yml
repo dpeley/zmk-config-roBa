@@ -18,19 +18,16 @@ jobs:
             python3-wheel xz-utils file make gcc g++ python3-dev
           pip3 install west
 
-      - name: Init west workspace
+      - name: Init west workspace (local)
         run: |
-          # Start from a clean workspace directory
-          rm -rf /tmp/zmk-workspace
-          mkdir -p /tmp/zmk-workspace
-          cd /tmp/zmk-workspace
-          # Use this repo (with west.yml at its root) as the manifest
-          west init "${GITHUB_WORKSPACE}"
+          cd "${GITHUB_WORKSPACE}"
+          # Initialize west using this repo (with west.yml at root) as manifest
+          west init -l .
           west update
 
       - name: Build right half
         run: |
-          cd /tmp/zmk-workspace
+          cd "${GITHUB_WORKSPACE}"
           west build \
             -s zmk/app \
             -d build/roba_r \
@@ -43,11 +40,11 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: roba_r-firmware
-          path: /tmp/zmk-workspace/build/roba_r/zephyr/*.uf2
+          path: build/roba_r/zephyr/*.uf2
 
       - name: Build left half
         run: |
-          cd /tmp/zmk-workspace
+          cd "${GITHUB_WORKSPACE}"
           west build \
             -s zmk/app \
             -d build/roba_l \
@@ -60,4 +57,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: roba_l-firmware
-          path: /tmp/zmk-workspace/build/roba_l/zephyr/*.uf2
+          path: build/roba_l/zephyr/*.uf2
