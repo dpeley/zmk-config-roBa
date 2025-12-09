@@ -81,7 +81,8 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_SCROLL_VERT";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            // CCW then CW; adjust sign if directions feel reversed
+            bindings = <&msc MOVE_Y(30)>, <&msc MOVE_Y(-30)>;
         };
 
         /* Encoder: horizontal scroll on FUNCTION layer */
@@ -89,7 +90,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_SCROLL_HORIZ";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_LEFT>, <&msc SCRL_RIGHT>;
+            bindings = <&msc MOVE_X(-30)>, <&msc MOVE_X(30)>;
         };
     
     };
