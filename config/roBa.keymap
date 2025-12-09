@@ -78,18 +78,20 @@
 
         /* Encoder: vertical scroll on base layer */
         enc_scroll_vert: enc_scroll_vert {
-            compatible = "zmk,behavior-inc-dec-kp";
+            compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_SCROLL_VERT";
-            #binding-cells = <2>;
+            #sensor-binding-cells = <0>;
             bindings = <&msc MOVE_Y(30)>, <&msc MOVE_Y(-30)>;
+            tap-ms = <5>;
         };
 
         /* Encoder: horizontal scroll on FUNCTION layer */
         enc_scroll_horiz: enc_scroll_horiz {
-            compatible = "zmk,behavior-inc-dec-kp";
+            compatible = "zmk,behavior-sensor-rotate";
             label = "ENC_SCROLL_HORIZ";
-            #binding-cells = <2>;
+            #sensor-binding-cells = <0>;
             bindings = <&msc MOVE_X(-30)>, <&msc MOVE_X(30)>;
+            tap-ms = <5>;
         };
     
     };
