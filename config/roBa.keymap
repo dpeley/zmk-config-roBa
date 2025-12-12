@@ -111,7 +111,7 @@
         ARROW {
             bindings = <
 &kp LC(Z)     &kp LC(X)      &kp LC(C)  &kp LC(V)       &kp LC(Y)                                   &kp RC(F)        &kp RS(RC(TAB))  &kp RG(LEFT)    &kp RG(RIGHT)  &kp RC(TAB)
-&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &kp LC(NUMBER_0)      &none      &none            &kp LEFT         &kp DOWN_ARROW  &kp UP         &kp RIGHT
+&kp LEFT_WIN  &kp LEFT_ALT   &kp LCTRL  &kp LEFT_SHIFT  &kp LC(A)  &kp LC(NUMBER_0)      &none      &caps_word       &kp LEFT         &kp DOWN_ARROW  &kp UP         &kp RIGHT
 &none         &kp BACKSPACE  &kp ENTER  &none           &none      &none                 &none      &kp PRINTSCREEN  &kp HOME         &kp PAGE_DOWN   &kp PG_UP      &kp END
 &trans        &trans         &trans     &kp ESC         &none      &kp TAB               &kp ENTER  &kp BACKSPACE                                                    &kp DEL
             >;
