@@ -27,34 +27,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -83,7 +56,7 @@
             bindings = <
 &kp Q           &kp W           &kp F        &kp P             &kp B                                        &kp J            &kp L              &kp U        &kp Y            &kp SQT
 &mt LEFT_WIN A  &mt LEFT_ALT R  &mt LCTRL S  &mt LEFT_SHIFT T  &kp G        &kp PRINTSCREEN      &kp RC(F)  &kp M            &mt RIGHT_SHIFT N  &mt RCTRL E  &mt RIGHT_ALT I  &mt RIGHT_WIN O
-&kp Z           &kp X           &kp C        &kp D             &kp V        &mo 6                &mo 6      &kp K            &kp H              &kp COMMA    &kp DOT          &kp SLASH
+&kp Z           &kp X           &kp C        &kp D             &kp V        &mo 6                &mo 6      &kp K            &kp H              &kp COMMA    &kp DOT          &lt 5 SLASH
 &mkp MCLK       &mkp LCLK       &mkp RCLK    &lt 4 ESC         &lt 3 SPACE  &lt 5 TAB            &kp ENTER  &lt 2 BACKSPACE                                                   &lt 1 DELETE
             >;
 
@@ -132,10 +105,10 @@
 
         BrowserNav {
             bindings = <
-&kp LS(LC(TAB))  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LC(TAB)  &none                            &none            &none  &none  &none  &none
-&kp LGUI         &kp LALT      &kp LCTRL      &kp LSHFT    &none      &none      &none      &none            &none  &none  &none  &none
-&none            &kp BSPC      &kp ENTER      &none        &none      &none      &none      &kp PRINTSCREEN  &none  &none  &none  &none
-&trans           &trans        &trans         &kp ESC      &kp SPACE  &none      &kp ENTER  &kp BSPC                              &none
+&kp LS(LC(TAB))  &kp LG(LEFT)  &kp LG(RIGHT)  &kp LC(TAB)  &none                            &none            &none      &none      &none      &none
+&kp LGUI         &kp LALT      &kp LCTRL      &kp LSHFT    &none      &none      &none      &none            &none      &none      &none      &none
+&none            &kp BSPC      &kp ENTER      &none        &none      &none      &none      &kp PRINTSCREEN  &mkp MCLK  &mkp LCLK  &mkp RCLK  &none
+&trans           &trans        &trans         &kp ESC      &kp SPACE  &none      &kp ENTER  &kp BSPC                                          &none
             >;
 
             sensor-bindings = <&inc_dec_kp LC(RS(TAB)) LC(TAB)>;
